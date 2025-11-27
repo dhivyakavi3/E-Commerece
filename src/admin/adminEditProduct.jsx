@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useParams, useNavigate } from "react-router-dom";
 import axios from "axios";
-import AdminSidebar from "./AdminSidebar";
+import AdminSidebar from "./adminSidebar";
 import "./admin.css";
 
 const AdminEditProduct = () => {

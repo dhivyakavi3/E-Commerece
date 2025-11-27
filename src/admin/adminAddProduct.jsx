@@ -1,6 +1,6 @@
 import { useState } from "react";
 import axios from "axios";
-import AdminSidebar from "./AdminSidebar";
+import AdminSidebar from "./adminSidebar";
 
 const AdminAddProduct = () => {
   const [form, setForm] = useState({
