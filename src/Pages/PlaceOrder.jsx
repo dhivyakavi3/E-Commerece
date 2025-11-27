@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import { useCart } from "../context/CartContext";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
-import "./placeorder.css";
+import "./PlaceOrder.css";
 
 const PlaceOrder = () => {
   const { cartItems, clearCart } = useCart();
