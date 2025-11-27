@@ -15,7 +15,6 @@ import OrderConfirmation from './Pages/OrderConfirmation';
 import OrderHistory from "./Pages/OrderHistory";
 import { CartProvider } from './context/CartContext';
 
-import "./app.css";
 
 // ADMIN
 import AdminAddProduct from './admin/adminAddProduct';
