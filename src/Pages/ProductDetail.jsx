@@ -14,7 +14,7 @@ const ProductDetail = () => {
   useEffect(() => {
     const fetchProduct = async () => {
       try {
-        const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+        const res = await axios.get(`https://mern-backend-one-drab.vercel.app/api/products/${id}`);
         setProduct(res.data);
       } catch (err) {
         console.error("Failed to load product", err);
@@ -32,7 +32,7 @@ const ProductDetail = () => {
 
       <img
         className="detail-image"
-        src={`http://localhost:5000/uploads/${product.image}`}
+        src={`https://mern-backend-one-drab.vercel.app/uploads/${product.image}`}
         alt={product.name}
       />
 

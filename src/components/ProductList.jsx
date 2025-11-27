@@ -16,7 +16,7 @@ const ProductList = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const { data } = await axios.get("http://localhost:5000/api/products");
+        const { data } = await axios.get("https://mern-backend-one-drab.vercel.app/api/products");
 
         // ⭐ Filter based on category
         const filtered = category
@@ -56,7 +56,7 @@ setProducts(filtered);
             onClick={() => navigate(`/product/${product._id}`)}
           >
             <img
-              src={`http://localhost:5000/uploads/${product.image}`}
+              src={`https://mern-backend-one-drab.vercel.app/uploads/${product.image}`}
               alt={product.name}
             />
           </div>

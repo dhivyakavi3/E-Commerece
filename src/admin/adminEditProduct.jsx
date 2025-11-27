@@ -23,7 +23,7 @@ const AdminEditProduct = () => {
   // Load existing product
   useEffect(() => {
     const fetchProduct = async () => {
-      const res = await axios.get(`http://localhost:5000/api/products/${id}`);
+      const res = await axios.get(`https://mern-backend-one-drab.vercel.app/api/products/${id}`);
       setForm({
         name: res.data.name,
         price: res.data.price,
@@ -50,7 +50,7 @@ const AdminEditProduct = () => {
 
     if (image) fd.append("image", image);
 
-    await axios.put(`http://localhost:5000/api/products/${id}`, fd, {
+    await axios.put(`https://mern-backend-one-drab.vercel.app/api/products/${id}`, fd, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
@@ -97,7 +97,7 @@ const AdminEditProduct = () => {
 
           <label>Current Image:</label>
           <img
-            src={`http://localhost:5000/uploads/${oldImage}`}
+            src={`https://mern-backend-one-drab.vercel.app/uploads/${oldImage}`}
             alt="product"
             width="120"
             style={{ borderRadius: "8px" }}

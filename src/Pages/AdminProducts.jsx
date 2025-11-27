@@ -15,7 +15,7 @@ const AdminProducts = () => {
   useEffect(() => {
     const fetchProducts = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/products");
+        const res = await axios.get("https://mern-backend-one-drab.vercel.app/api/products");
         setProducts(res.data);
       } catch (err) {
         console.error("Error:", err);
@@ -29,7 +29,7 @@ const AdminProducts = () => {
     if (!window.confirm("Delete this product?")) return;
 
     try {
-      await axios.delete(`http://localhost:5000/api/products/${id}`, {
+      await axios.delete(`https://mern-backend-one-drab.vercel.app/api/products/${id}`, {
         headers: { Authorization: `Bearer ${token}` }
       });
 
@@ -65,7 +65,7 @@ const AdminProducts = () => {
             <tr key={product._id}>
               <td>
                 <img
-                  src={`http://localhost:5000/uploads/${product.image}`}
+                  src={`https://mern-backend-one-drab.vercel.app/uploads/${product.image}`}
                   alt=""
                   style={{ width: "60px", height: "60px", borderRadius: "5px" }}
                 />

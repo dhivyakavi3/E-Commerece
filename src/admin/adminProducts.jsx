@@ -7,7 +7,7 @@ const AdminProducts = () => {
   const [products, setProducts] = useState([]);
 
   const fetchProducts = async () => {
-    const res = await axios.get("http://localhost:5000/api/products");
+    const res = await axios.get("https://mern-backend-one-drab.vercel.app/api/products");
     setProducts(res.data);
   };
 
@@ -16,7 +16,7 @@ const AdminProducts = () => {
 
     const token = localStorage.getItem("token");
 
-    await axios.delete(`http://localhost:5000/api/products/${id}`, {
+    await axios.delete(`https://mern-backend-one-drab.vercel.app/api/products/${id}`, {
       headers: { Authorization: `Bearer ${token}` }
     });
 
@@ -48,7 +48,7 @@ const AdminProducts = () => {
           <tbody>
             {products.map((p) => (
               <tr key={p._id}>
-                <td><img src={`http://localhost:5000/uploads/${p.image}`} width="60" /></td>
+                <td><img src={`https://mern-backend-one-drab.vercel.app/uploads/${p.image}`} width="60" /></td>
                 <td>{p.name}</td>
                 <td>₹{p.price}</td>
                 <td><Link to={`/admin/edit-product/${p._id}`} className="edit-btn">Edit</Link></td>

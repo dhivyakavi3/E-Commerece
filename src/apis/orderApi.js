@@ -2,7 +2,7 @@ import axios from "axios";
 
 // Create axios instance right here
 const API = axios.create({
-  baseURL: "http://localhost:5000/api",
+  baseURL: "https://mern-backend-one-drab.vercel.app/api",
   withCredentials: true,
 });
 

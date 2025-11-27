@@ -9,7 +9,7 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
   return (
     <div className="card">
       <img
-        src={`http://localhost:5000/uploads/${product.image}`}
+        src={`https://mern-backend-one-drab.vercel.app/uploads/${product.image}`}
         alt={product.name}
         className="card-img"
       />

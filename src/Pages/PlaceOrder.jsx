@@ -45,7 +45,7 @@ const PlaceOrder = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.post("http://localhost:5000/api/orders", orderData, {
+      const res = await axios.post("https://mern-backend-one-drab.vercel.app/api/orders", orderData, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

@@ -21,7 +21,7 @@ const AdminAddProduct = () => {
 
     const token = localStorage.getItem("token");
 
-    await axios.post("http://localhost:5000/api/products", fd, {
+    await axios.post("https://mern-backend-one-drab.vercel.app/api/products", fd, {
       headers: { Authorization: `Bearer ${token}` },
     });
 
